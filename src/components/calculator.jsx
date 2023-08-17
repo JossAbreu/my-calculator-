@@ -4,6 +4,11 @@ function Calculator() {
     const [input, setInput] = useState('');
     const [resultado, setResultado] = useState('');
   
+    const handleInput = (event) => {
+      const numericValue = event.target.value.replace(/\D/g, ''); // Filtrar solo números
+      setInput(numericValue);
+    };
+  
     function handleButtonClick(digit) {
       if (digit === '=') {
         setInput(eval(input).toString());
@@ -38,7 +43,7 @@ function Calculator() {
             className='w-44 outline-none border-[3px] border-red-500 text-center text-red-600 mr-10 rounded-md bg-black '
             name="texte"
             value={input}
-            onChange={event => setInput(event.target.value)}
+            onChange={handleInput}
           />
           <button type='button' className='bg-orange-500 w-28 h-10 rounded hover:scale-110 transition ease-in hover:bg-green-500' onClick={calcular}>Calcular</button>
         </div>
@@ -47,15 +52,15 @@ function Calculator() {
           <div className='text-white p-2 flex-col-reverse'>
             <button type="button" className='text-black shadow-xl bg-red-500 p-1 m-2 w-16 h-14 rounded-full' onClick={() => handleButtonClick('AC')}>AC</button>
             <button type="button" className='shadow-xl bg-slate-500 p-1 m-2 w-16 h-14 rounded-full hover:scale-110 transition ease-in hover:bg-blue-500 ' onClick={() => handleButtonClick('1')}>1</button>
-            <button type="button" className='shadow-xl bg-slate-500 p-1 m-2 w-16 h-14 rounded-full hover:scale-110 transition ease-in hover:bg-blue-500 ' onClick={() => handleButtonClick('2')}>2</button>
-            <button type="button" className='shadow-xl bg-slate-500 p-1 m-2 w-16 h-14 rounded-full hover:scale-110 transition ease-in hover:bg-blue-500 ' onClick={() => handleButtonClick('3')}>3</button>
-            <button type="button" className='shadow-xl bg-slate-500 p-1 m-2 w-16 h-14 rounded-full hover:scale-110 transition ease-in hover:bg-blue-500 ' onClick={() => handleButtonClick('4')}>4</button>
+            <button type="button" className='shadow-xl bg-slate-500 p-1 m-2 w-16 h-14 rounded-full hover:scale-110 transition ease-in hover:bg-yellow-500 ' onClick={() => handleButtonClick('2')}>2</button>
+            <button type="button" className='shadow-xl bg-slate-500 p-1 m-2 w-16 h-14 rounded-full hover:scale-110 transition ease-in hover:bg-purple-500 ' onClick={() => handleButtonClick('3')}>3</button>
+            <button type="button" className='shadow-xl bg-slate-500 p-1 m-2 w-16 h-14 rounded-full hover:scale-110 transition ease-in hover:bg-green-500 ' onClick={() => handleButtonClick('4')}>4</button>
             <button type="button" className='shadow-xl bg-slate-500 p-1 m-2 w-16 h-14 rounded-full hover:scale-110 transition ease-in hover:bg-blue-500 ' onClick={() => handleButtonClick('5')}>5</button>
-            <button type="button" className='shadow-xl bg-slate-500 p-1 m-2 w-16 h-14 rounded-full hover:scale-110 transition ease-in hover:bg-blue-500 ' onClick={() => handleButtonClick('6')}>6</button>
+            <button type="button" className='shadow-xl bg-slate-500 p-1 m-2 w-16 h-14 rounded-full hover:scale-110 transition ease-in hover:bg-orange-500 ' onClick={() => handleButtonClick('6')}>6</button>
             <button type="button" className='shadow-xl bg-slate-500 p-1 m-2 w-16 h-14 rounded-full hover:scale-110 transition ease-in hover:bg-blue-500 ' onClick={() => handleButtonClick('7')}>7</button>
-            <button type="button" className='shadow-xl bg-slate-500 p-1 m-2 w-16 h-14 rounded-full hover:scale-110 transition ease-in hover:bg-blue-500 ' onClick={() => handleButtonClick('8')}>8</button>
+            <button type="button" className='shadow-xl bg-slate-500 p-1 m-2 w-16 h-14 rounded-full hover:scale-110 transition ease-in hover:bg-pink-500 ' onClick={() => handleButtonClick('8')}>8</button>
             <button type="button" className='shadow-xl bg-slate-500 p-1 m-2 w-16 h-14 rounded-full hover:scale-110 transition ease-in hover:bg-blue-500 ' onClick={() => handleButtonClick('9')}>9</button>
-            <button type="button" className='shadow-xl bg-slate-500 p-1 m-2 w-36 h-14 rounded-full hover:scale-110 transition ease-in hover:bg-blue-500 ' onClick={() => handleButtonClick('0')}>0</button>
+            <button type="button" className='shadow-xl bg-slate-500 p-1 m-2 w-36 h-14 rounded-full hover:scale-110 transition ease-in hover:bg-yellow-500 ' onClick={() => handleButtonClick('0')}>0</button>
           </div>
           <div className='font-semibold text-white p-2 flex-col'>
             <button type='button' className='shadow-xl bg-gray-950 p-1 m-2 w-16 h-14 rounded-full hover:scale-110 transition ease-in hover:bg-red-500' onClick={() => handleButtonClick('+')}>+</button>
