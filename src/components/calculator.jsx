@@ -34,7 +34,7 @@ function Calculator() {
     <div  className='bg-gray-900 items-center justify-center flex flex-1 flex-col max-h-screen h-screen'>
       <div data-aos="fade-down" data-aos-duration="2000" className=' flex flex-col items-center justify-center text-center gap-3 mb-9'>
         <h1 className=' text-red-600 text-3xl font-bold'>My first Calculator </h1>
-        <h1 className=' text-white text-md  '>Frontend Develiper Josue abreu </h1>
+        <h1 className=' text-white text-md  '>Frontend Developer - Josue abreu </h1>
       </div>
       <form data-aos="fade-up" data-aos-duration="2000" className='flex shadow-m flex-col bg-slate-300 w-96 h-96 rounded-xl'>
         <div className='font-bold flex-row flex p-4'>
